@@ -1,0 +1,37 @@
+---
+jupyter: python3
+---
+
+```{python}
+#importing libraries
+import altair as alt
+from bokeh.sampledata.penguins import data as penguins
+
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
+#plotting
+brush = alt.selection(type='interval')
+
+points = alt.Chart(
+  data=penguins, 
+  title="Palmer Penguins Dataset",
+  ).mark_circle(size=60).encode(
+  alt.X('bill_length_mm', scale=alt.Scale(domain=[30,60])),
+  alt.Y('bill_depth_mm', scale=alt.Scale(domain=[12,22])),
+  color='species',
+  ).add_selection(
+    brush
+)
+
+bars = alt.Chart(penguins).mark_bar().encode(
+    y='island',
+    color='island',
+    x='count(island)'
+).transform_filter(
+    brush
+)
+
+points & bars
+```
+
