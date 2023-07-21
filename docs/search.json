@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "posts/example.html",
+    "href": "posts/example.html",
+    "title": "harry_blog",
+    "section": "",
+    "text": "#importing libraries\nimport altair as alt\nfrom bokeh.sampledata.penguins import data as penguins\n\nimport warnings\nwarnings.simplefilter(action='ignore', category=FutureWarning)\n\n#plotting\nbrush = alt.selection(type='interval')\n\npoints = alt.Chart(\n  data=penguins, \n  title=\"Palmer Penguins Dataset\",\n  ).mark_circle(size=60).encode(\n  alt.X('bill_length_mm', scale=alt.Scale(domain=[30,60])),\n  alt.Y('bill_depth_mm', scale=alt.Scale(domain=[12,22])),\n  color='species',\n  ).add_selection(\n    brush\n)\n\nbars = alt.Chart(penguins).mark_bar().encode(\n    y='island',\n    color='island',\n    x='count(island)'\n).transform_filter(\n    brush\n)\n\npoints & bars\n\n/Users/harry/Library/Python/3.9/lib/python/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'selection' is deprecated.\n   Use 'selection_point()' or 'selection_interval()' instead; these functions also include more helpful docstrings.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)\n/Users/harry/Library/Python/3.9/lib/python/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'add_selection' is deprecated. Use 'add_params' instead.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "This is a Harry’s personal website.\n\n\n\n\n\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]
