@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/example.html",
+    "href": "posts/example.html",
+    "title": "harry_blog",
+    "section": "",
+    "text": "#importing libraries\nimport altair as alt\nfrom bokeh.sampledata.penguins import data as penguins\n\nimport warnings\nwarnings.simplefilter(action='ignore', category=FutureWarning)\n\n#plotting\nbrush = alt.selection(type='interval')\n\npoints = alt.Chart(\n  data=penguins, \n  title=\"Palmer Penguins Dataset\",\n  ).mark_circle(size=60).encode(\n  alt.X('bill_length_mm', scale=alt.Scale(domain=[30,60])),\n  alt.Y('bill_depth_mm', scale=alt.Scale(domain=[12,22])),\n  color='species',\n  ).add_selection(\n    brush\n)\n\nbars = alt.Chart(penguins).mark_bar().encode(\n    y='island',\n    color='island',\n    x='count(island)'\n).transform_filter(\n    brush\n)\n\npoints & bars\n\n/home/harry/.local/lib/python3.8/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'selection' is deprecated.\n   Use 'selection_point()' or 'selection_interval()' instead; these functions also include more helpful docstrings.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)\n/home/harry/.local/lib/python3.8/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'add_selection' is deprecated. Use 'add_params' instead.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -7,17 +14,10 @@
     "text": "About this site"
   },
   {
-    "objectID": "posts/example.html",
-    "href": "posts/example.html",
-    "title": "harry_blog",
-    "section": "",
-    "text": "#importing libraries\nimport altair as alt\nfrom bokeh.sampledata.penguins import data as penguins\n\nimport warnings\nwarnings.simplefilter(action='ignore', category=FutureWarning)\n\n#plotting\nbrush = alt.selection(type='interval')\n\npoints = alt.Chart(\n  data=penguins, \n  title=\"Palmer Penguins Dataset\",\n  ).mark_circle(size=60).encode(\n  alt.X('bill_length_mm', scale=alt.Scale(domain=[30,60])),\n  alt.Y('bill_depth_mm', scale=alt.Scale(domain=[12,22])),\n  color='species',\n  ).add_selection(\n    brush\n)\n\nbars = alt.Chart(penguins).mark_bar().encode(\n    y='island',\n    color='island',\n    x='count(island)'\n).transform_filter(\n    brush\n)\n\npoints & bars\n\n/Users/harry/Library/Python/3.9/lib/python/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'selection' is deprecated.\n   Use 'selection_point()' or 'selection_interval()' instead; these functions also include more helpful docstrings.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)\n/Users/harry/Library/Python/3.9/lib/python/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'add_selection' is deprecated. Use 'add_params' instead.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Blog",
+    "title": "Hi, I’m Albert Rapp.",
     "section": "",
-    "text": "This is a Harry’s personal website.\n\n\n\n\n\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "::: {.grid}\n\n\n\n\nHi, I’m Albert Rapp.\nI’m a mathematics PhD students with a passion for R, data visualization, Shiny and statistics/machine learning. On this blog, I share and teach what I learn.\nTo get started, you can check out my most popular content below. You can find me on Twitter or GitHub and YouTube. Feel free to reach out to me via mail and subscribe to my email newsletter."
   }
 ]
