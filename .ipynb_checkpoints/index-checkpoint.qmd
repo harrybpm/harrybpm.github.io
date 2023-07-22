@@ -1,11 +1,10 @@
 ---
 page-layout: full
 ---
-
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](pict/1517222341608.jpg)
+![](pict/futao.png){height=300}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
@@ -35,9 +34,4 @@ Diponegoro University, Indonesia
 - ...no offset (it's still in the first row)
 
 :::
-
-
-
-
-<iframe id="beehiiv-form" src="https://embeds.beehiiv.com/9232d2a2-6e85-4beb-b8ed-1de94e9e4f01?slim=true" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent; height: 75px"></iframe>
 :::

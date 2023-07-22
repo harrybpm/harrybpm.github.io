@@ -1,0 +1,31 @@
+---
+title: "Publication"
+---
+
+Here is some papers I have published and the awards.
+
+::: {.g-col-12 .g-col-md-5}
+# Award
+
+- Excellent Student Paper Award: 2022 International Workshop on Smart Info-Media Systems in Asia 
+
+:::
+
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+# International conference 
+
+- Muhammad Harry Bintang Pratama, Tomoki Nakashima, Yuhei Nagaoe, Masayuki Kurosaki, and Hiroshi Ochi, "Experimental Evaluation of Rate Adaptation using Deep-Q-Network in IEEE 802.11 WLAN", IEEE Consumer Communications & Networking Conference(CCNC2023), Las Vegas, 9 January, 2023.
+- Tomoki Nakashima, Leonardo Lanante, Muhammad Harry Bintang Pratama, Masayuki Kurosaki, and Hiroshi Ochi,“ns3-ai: Rate Control for Wireless LAN by Deep Q-Network,” International Workshop on Smart Info-Media System in Asia(SISA2022), Online, 15 September, 2022.
+- Muhammad Harry Bintang Pratama, Leonardo Lanante, and Hiroshi Ochi, “A Low Complexity Carrier Frequency Offset Compensation for Full-Duplex with Cooperative MIMO in IEEE 802.11 WLAN,” International Workshop on Smart Info-Media System in Asia(SISA2022), Online, 15 September, 2022.
+- Dody Ichwana Putra, M.Harry Bintang, Leonardo Lanante Jr, and Hiroshi Ochi, "Packet Format and Modulation Classification of Wireless LAN Using Distributed Convolutional Neural Network", Proc. IEEE International Symposium On Intelligent Signal Processing And Communication Systems (ISPACS 2021), Online, paper #137, November 2021.
+- Muhammad Harry Bintang Pratama, Dody Ichwana Putra, Leonardo Lanante and Hiroshi Ochi, "Convolutional Neural Network for Asynchronous Packet Parameter Identification in Dense Wi-Fi," Proc. 2021 IEEE International Conference on Communications Workshops, IEEE ICC 2021 WS-16, paper #1570707186, pp. 1-6, Online,14-23 (17) June 2021.
+:::
+
+::: {.g-col-12 .g-col-md-5}
+# Domestic conference
+
+- Muhammad Harry Bintang Pratama, Leonardo Lanante Jr, 尾知博、”Deep Learning-based OBSS Packet Recognition in the presence of OFDM Symbol Timing Offset”, スマートインフォメディアシステム研究会（SIS)、Soft Computing, paper #IEICE-SIS2020-55, pp. 109-113, Online, 5 March 2021.
+- Muhammad Harry Bintang Pratama, Leonardo Lanante Jr, 尾知博、”CNN-based OBSS Packet Detection for Spatial Reuse Enhancement”,2021電子情報通信学会総合大会、D-20 (情報論的学習理論と機械学習), paper #21G2030, Online, 9-12 (11) March 2021.
+
+:::
