@@ -5,17 +5,38 @@ page-layout: full
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](profile2.jpg)
+![](pict/1517222341608.jpg)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-# Hi, I'm Albert Rapp.
-I'm a mathematics PhD students with a passion for R, data visualization, Shiny and statistics/machine learning. On this blog, I share and teach what I learn.
+# Hi, I'm Harry Pratama.
+I'm a PhD student majoring in computer science with a focus on Machine Learning, Signal Processing, VLSI, and Wireless Communication. This platform is where I share the knowledge I've gained, the insights I've gathered, and the challenges I've overcome during my academic journey.
 
-To get started, you can check out my most popular content below. You can find me on [Twitter](https://twitter.com/rappa753) or
-[GitHub](https://github.com/AlbertRapp) and 
-[YouTube](https://www.youtube.com/user/Alfrodo123). 
-Feel free to reach out to me via [mail](mailto:blog@albert-rapp.de) and subscribe to my email newsletter.
+To get started, you can check out my most popular content below. You can find me on [Twitter](https://twitter.com/hrrx102) or
+[GitHub](https://github.com/harrybpm) and 
+Feel free to reach out to me via [mail](mailto:muhammadharry.bp@gmail.com).
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+# Education 
+
+- Ph.D. in Computer science, 2022-now
+Kyushu Institute of Technology, Japan
+- M. Eng. in Advanced Informatics, 2022
+Kyushu Institute of Technology, Japan
+- B. Eng in Electrical Engineering (specialised in Telecommunication, 2017
+Diponegoro University, Indonesia
+:::
+
+::: {.g-col-12 .g-col-md-5}
+# Interest
+
+- This div...
+- ...required...
+- ...no offset (it's still in the first row)
+
+:::
+
+
 
 
 <iframe id="beehiiv-form" src="https://embeds.beehiiv.com/9232d2a2-6e85-4beb-b8ed-1de94e9e4f01?slim=true" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent; height: 75px"></iframe>
