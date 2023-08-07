@@ -1,0 +1,237 @@
+---
+title: "Little fun project with Pi Car"
+description: |
+  I had a little fun playing with the Pi Car.
+date: "2023-05-07"
+categories: [python]
+
+code-annotations: hover
+footnotes-hover: true
+toc-depth: 4
+---
+
+Last week, my professor suddenly asked me to make some applications for the Pi Car.
+Pi Cart[^picar] is a robot run on top of Raspberry Pi platform, and can be programmed or controlled as a self-driving or multi purposes robot car.
+I know that the lab has the robots but I did not know that they are going to be actually used.
+
+Since the Raspberry Pi serves as the brain of the robot, we can enable it to execute Python code and make decisions based on its environment.
+There are some hardware modules attached to this robot:
+
+- Camera Module
+- Two servo motors and motor controllers
+- Ultrasonic Sensors
+
+When I asked back what kind of applications, he said that it is for demonstrational purpose to children
+Here are some applications that I have made for that purpose.
+[^picar]: See the [Pi Car documentation](https://docs.sunfounder.com/projects/picar-x/en/latest/introduction.html#about-picar-x) for more information.  
+## Matador
+The idea of matador is that we want the robot car to move toward and object with red color, just like a bull charging in a matador.
+Pi car came with a few example code that can be executed right away. 
+I am using the `color_detection.py` and `avoiding_obstacles.py` from the example as a base to make the matador program.
+Here is the code:
+
+```bash
+from picarx import Picarx
+import time
+from vilib import Vilib
+
+POWER = 50
+SafeDistance = 40   # > 30 safe
+DangerDistance = 20 # > 20 && < 30 turn around, 
+                    # < 20 backward
+
+def main():
+    Vilib.camera_start(vflip=False,hflip=False)
+    Vilib.display(local=True,web=True)
+    Vilib.color_detect("red")  # Set the color to be detected
+    time.sleep(2)
+    print('\npress Ctrl+C to exit\n')
+    try:
+        px = Picarx()
+        # px = Picarx(ultrasonic_pins=['D2','D3']) # tring, echo
+       
+        while True:
+            num = Vilib.detect_obj_parameter['color_n'] 
+            print("\rnumber of color blocks found: %s  "%num, end='', flush=True)
+            if num:
+                px.forward(POWER)
+            else:
+                px.set_dir_servo_angle(40)
+                px.forward(POWER)
+                time.sleep(0.5)
+
+
+
+    finally:
+        px.forward(0)
+
+
+if __name__ == "__main__":
+    main()
+
+
+```
+
+
+## Battle tank
+The second application requires two Pi Car. instead of making the robot cars actually fighting and shooting some missiles,
+here we want to have both cars fight each other by capturing an object placed in each car.
+The winner is the one who can capture opponent's object first. I am using the `color_detection.py`, `video_car.py`, and `time_to_speech.py` 
+from the example as a base to make the battle tank program.
+Here is the code:
+```bash
+print('Please run under desktop environment (eg: vnc) to display the image window')
+
+from robot_hat import TTS
+from robot_hat.utils import reset_mcu
+from picarx import Picarx
+from vilib import Vilib
+from time import sleep, time, strftime, localtime
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+import numpy as np
+import time
+import readchar
+import cv2
+from vilib import Vilib
+
+reset_mcu()
+sleep(0.2)
+
+manual = '''
+Press key to call the function(non-case sensitive):
+
+    O: speed up
+    P: speed down
+    W: forward  
+    S: backward
+    A: turn left
+    D: turn right
+    F: stop
+    T: take photo
+
+    Ctrl+C: quit
+'''
+
+px = Picarx()
+
+def move(operate:str, speed):
+
+    if operate == 'stop':
+        px.stop()  
+    else:
+        if operate == 'forward':
+            px.set_dir_servo_angle(0)
+            px.forward(speed)
+        elif operate == 'backward':
+            px.set_dir_servo_angle(0)
+            px.backward(speed)
+        elif operate == 'turn left':
+            px.set_dir_servo_angle(-30)
+            px.forward(speed)
+        elif operate == 'turn right':
+            px.set_dir_servo_angle(30)
+            px.forward(speed)
+        
+
+
+
+
+
+def main():
+    speed = 0
+    status = 'stop'
+
+    Vilib.camera_start(vflip=False,hflip=False)
+    Vilib.display(local=True,web=True)
+    Vilib.color_detect("red")  # Set the color to be detected
+    time.sleep(2)
+    print('\npress Ctrl+C to exit\n')
+
+
+    sleep(2)  # wait for startup
+    print(manual)
+    
+    while True:
+        print("\rstatus: %s , speed: %s    "%(status, speed), end='', flush=True)
+        # readkey
+        key = readchar.readkey().lower()
+        # operation 
+        if key in ('wsadfop'):
+            # throttle
+            if key == 'o':
+                if speed <=90:
+                    speed += 10           
+            elif key == 'p':
+                if speed >=10:
+                    speed -= 10
+                if speed == 0:
+                    status = 'stop'
+            # direction
+            elif key in ('wsad'):
+                if speed == 0:
+                    speed = 10
+                if key == 'w':
+                    # Speed limit when reversing,avoid instantaneous current too large
+                    if status != 'forward' and speed > 60:  
+                        speed = 60
+                    status = 'forward'
+                elif key == 'a':
+                    status = 'turn left'
+                elif key == 's':
+                    if status != 'backward' and speed > 60: # Speed limit when reversing
+                        speed = 60
+                    status = 'backward'
+                elif key == 'd':
+                    status = 'turn right' 
+            # stop
+            elif key == 'f':
+                status = 'stop'
+            # move 
+            move(status, speed)  
+        # get red area for some time after press t
+        elif key == 't':
+            try:
+                num = Vilib.detect_obj_parameter['color_n'] 
+                print("\rnumber of color blocks found: %s  "%num, end='', flush=True)
+                time.sleep(0.5)
+                if num > 10:
+                    words = ["Bang!", "I win"]
+                    tts_robot = TTS()
+                    for i in words:
+                        print(i)
+                        tts_robot.say(i)
+                    break
+
+
+            except KeyboardInterrupt:
+                print('\nquit ...')
+                break
+            except Exception as e:
+                print('error:%s'%e)
+                break
+
+
+            
+        # quit
+        elif key == readchar.key.CTRL_C:
+            print('\nquit ...')
+            px.stop()
+            Vilib.camera_close()
+            break 
+
+        sleep(0.1)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:    
+        print("error:%s"%e)
+    finally:
+        px.stop()
+        Vilib.camera_close()
+```
+
+## Result
+I will update this page when I have tested the codes above.

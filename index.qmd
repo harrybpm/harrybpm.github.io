@@ -1,37 +1,59 @@
 ---
-page-layout: full
+title: "Harry PRATAMA"
+subtitle: |
+  Doctoral student and pro Dota player (_wannabe_)
+image: /pict/futao.png
+about:
+  id: edu-exp
+  template: solana
+  image-width: 9em
+  image-shape: round
+  links:
+    - text: "{{< iconify fa6-solid envelope >}}"
+      href: "mailto:muhammadharry.bp@gmail.com"
+      aria-label: "envelope logo for email"
+    - text: "{{< iconify fa6-brands twitter >}}"
+      href: "https://twitter.com/hrrx102"
+      aria-label: "Twitter logo linking to harrypratama account"
+    - text: "{{< iconify fa6-brands linkedin >}}"
+      href: "https://www.linkedin.com/in/harry64h/"
+      aria-label: "LinkedIn logo linking to harrypratama account"
+    - text: "{{< iconify fa6-brands github >}}"
+      href: "https://github.com/harrybpm"
+      aria-label: "GitHub logo linking to harrypratama account"
 ---
-::: {.grid}
 
-::: {.g-col-12 .g-col-md-6}
-![](pict/futao.png){height=300}
+::: {#edu-exp}
 :::
 
-::: {.g-col-12 .g-col-md-6}
-# Hi, I'm Harry Pratama.
 I'm a PhD student majoring in computer science with a focus on Machine Learning, Signal Processing, VLSI, and Wireless Communication. This platform is where I share the knowledge I've gained, the insights I've gathered, and the challenges I've overcome during my academic journey.
 
-To get started, you can check out my most popular content below. You can find me on [Twitter](https://twitter.com/hrrx102) or
-[GitHub](https://github.com/harrybpm) and 
-Feel free to reach out to me via [mail](mailto:muhammadharry.bp@gmail.com).
 
-::: {.g-col-12 .g-col-md-5 .g-start-md-2}
-# Education 
+:::: {.grid}
 
-- Ph.D. in Computer science, 2022-now
-Kyushu Institute of Technology, Japan
-- M. Eng. in Advanced Informatics, 2022
-Kyushu Institute of Technology, Japan
-- B. Eng in Electrical Engineering (specialised in Telecommunication, 2017
-Diponegoro University, Indonesia
+::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
+## Education
+
+- **Ph.D. in Computer science**, **2022-now**  
+  *Kyushu Institute of Technology, Japan*
+
+- **_M. Eng._ in Advanced Informatics**, **2022**  
+  *Kyushu Institute of Technology, Japan*
+
+- **_B. Eng._ in Electrical Engineering** (*specialised in Telecommunication*), **2017**  
+  *Diponegoro University, Indonesia*
 :::
 
-::: {.g-col-12 .g-col-md-5}
-# Interest
+::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
+## Interests
 
-- This div...
-- ...required...
-- ...no offset (it's still in the first row)
+- Data Analysis
+- Data Visualisation
+- Knowledge Sharing
+- Learning New Skills
+- Quarto
+- Dota
 
 :::
-:::
+
+::::
