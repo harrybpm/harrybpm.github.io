@@ -1,5 +1,31 @@
 ---
 title: "Projects"
+page-layout: full
+title-block-banner: true
+listing:
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  max-description-length: 300
+  fields: [image, title, description, categories]
+  contents:
+    - path: http://lab.harrybp.com/live_birth_occ
+      image: /projects/live-birth-occ.png
+      title: "Live birth occurence"
+      description: "Predict the possibility of live birth occurence."
+      date: "2023-08-10"
+      categories: [Python, Machine Learning]
+    - path: http://lab.harrybp.com/vid_transcript
+      title: "Simple video transcript creator"
+      description: "Web app to extract transcript from the uploaded video file."
+      date: "2023-07-26"
+      categories: [Python, Machine Learning]
+    - path: http://lab.harrybp.com/plotting_demo
+      image: /projects/plotting-demo.png
+      title: "Plotting demo"
+      description: "Just an example to see if the web app is working."
+      date: "2023-04-01"
+      categories: [Python]
 ---
-
-Here is some projects that I have been working on
