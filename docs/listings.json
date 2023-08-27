@@ -5,5 +5,9 @@
       "/posts/example.html",
       "/posts/post1_20230805/post1.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": []
   }
 ]
