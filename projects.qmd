@@ -1,7 +1,7 @@
 ---
-title: "Harry PRATAMA"
+title: "About"
 subtitle: |
-  Doctoral student and pro Dota player (_wannabe_)
+  Harry Pratama
 image: /pict/futao.png
 about:
   id: edu-exp
