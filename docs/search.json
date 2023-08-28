@@ -1,45 +1,38 @@
 [
   {
-    "objectID": "publication.html",
-    "href": "publication.html",
-    "title": "Publication",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "Here is some papers I have published and the awards.\n\nAward\n\nExcellent Student Paper Award: 2022 International Workshop on Smart Info-Media Systems in Asia\n\n\n\nInternational conference\n\nMuhammad Harry Bintang Pratama, Tomoki Nakashima, Yuhei Nagaoe, Masayuki Kurosaki, and Hiroshi Ochi, “Experimental Evaluation of Rate Adaptation using Deep-Q-Network in IEEE 802.11 WLAN”, IEEE Consumer Communications & Networking Conference(CCNC2023), Las Vegas, 9 January, 2023.\nTomoki Nakashima, Leonardo Lanante, Muhammad Harry Bintang Pratama, Masayuki Kurosaki, and Hiroshi Ochi,“ns3-ai: Rate Control for Wireless LAN by Deep Q-Network,” International Workshop on Smart Info-Media System in Asia(SISA2022), Online, 15 September, 2022.\nMuhammad Harry Bintang Pratama, Leonardo Lanante, and Hiroshi Ochi, “A Low Complexity Carrier Frequency Offset Compensation for Full-Duplex with Cooperative MIMO in IEEE 802.11 WLAN,” International Workshop on Smart Info-Media System in Asia(SISA2022), Online, 15 September, 2022.\nDody Ichwana Putra, M.Harry Bintang, Leonardo Lanante Jr, and Hiroshi Ochi, “Packet Format and Modulation Classification of Wireless LAN Using Distributed Convolutional Neural Network”, Proc. IEEE International Symposium On Intelligent Signal Processing And Communication Systems (ISPACS 2021), Online, paper #137, November 2021.\nMuhammad Harry Bintang Pratama, Dody Ichwana Putra, Leonardo Lanante and Hiroshi Ochi, “Convolutional Neural Network for Asynchronous Packet Parameter Identification in Dense Wi-Fi,” Proc. 2021 IEEE International Conference on Communications Workshops, IEEE ICC 2021 WS-16, paper #1570707186, pp. 1-6, Online,14-23 (17) June 2021.\n\n\n\nDomestic conference\n\nMuhammad Harry Bintang Pratama, Leonardo Lanante Jr, 尾知博、”Deep Learning-based OBSS Packet Recognition in the presence of OFDM Symbol Timing Offset”, スマートインフォメディアシステム研究会（SIS)、Soft Computing, paper #IEICE-SIS2020-55, pp. 109-113, Online, 5 March 2021.\nMuhammad Harry Bintang Pratama, Leonardo Lanante Jr, 尾知博、”CNN-based OBSS Packet Detection for Spatial Reuse Enhancement”,2021電子情報通信学会総合大会、D-20 (情報論的学習理論と機械学習), paper #21G2030, Online, 9-12 (11) March 2021."
+    "text": "Little fun project with Pi Car\n\n\n\n\n\n\n\npython\n\n\n\n\nI had a little fun playing with the Pi Car.\n\n\n\n\n\n\nMay 7, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Harry PRATAMA",
+    "section": "",
+    "text": "I’m a PhD student majoring in computer science with a focus on Machine Learning, Signal Processing, VLSI, and Wireless Communication. This platform is where I share the knowledge I’ve gained, the insights I’ve gathered, and the challenges I’ve overcome during my academic journey."
+  },
+  {
+    "objectID": "projects.html#education",
+    "href": "projects.html#education",
+    "title": "Harry PRATAMA",
+    "section": "Education",
+    "text": "Education\n\nPh.D. in Computer science, 2022-now\nKyushu Institute of Technology, Japan\nM. Eng. in Advanced Informatics, 2022\nKyushu Institute of Technology, Japan\nB. Eng. in Electrical Engineering (specialised in Telecommunication), 2017\nDiponegoro University, Indonesia"
+  },
+  {
+    "objectID": "projects.html#interests",
+    "href": "projects.html#interests",
+    "title": "Harry PRATAMA",
+    "section": "Interests",
+    "text": "Interests\n\nData Analysis\nData Visualisation\nKnowledge Sharing\nLearning New Skills\nQuarto\nDota"
   },
   {
     "objectID": "posts/example.html",
     "href": "posts/example.html",
     "title": "harry_blog",
     "section": "",
-    "text": "#importing libraries\nimport altair as alt\nfrom bokeh.sampledata.penguins import data as penguins\n\nimport warnings\nwarnings.simplefilter(action='ignore', category=FutureWarning)\n\n#plotting\nbrush = alt.selection(type='interval')\n\npoints = alt.Chart(\n  data=penguins, \n  title=\"Palmer Penguins Dataset\",\n  ).mark_circle(size=60).encode(\n  alt.X('bill_length_mm', scale=alt.Scale(domain=[30,60])),\n  alt.Y('bill_depth_mm', scale=alt.Scale(domain=[12,22])),\n  color='species',\n  ).add_selection(\n    brush\n)\n\nbars = alt.Chart(penguins).mark_bar().encode(\n    y='island',\n    color='island',\n    x='count(island)'\n).transform_filter(\n    brush\n)\n\npoints & bars\n\n/home/harry/.local/lib/python3.8/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'selection' is deprecated.\n   Use 'selection_point()' or 'selection_interval()' instead; these functions also include more helpful docstrings.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)\n/home/harry/.local/lib/python3.8/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'add_selection' is deprecated. Use 'add_params' instead.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Harry PRATAMA",
-    "section": "",
-    "text": "I’m a PhD student majoring in computer science with a focus on Machine Learning, Signal Processing, VLSI, and Wireless Communication. This platform is where I share the knowledge I’ve gained, the insights I’ve gathered, and the challenges I’ve overcome during my academic journey."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Harry PRATAMA",
-    "section": "Education",
-    "text": "Education\n\nPh.D. in Computer science, 2022-now\nKyushu Institute of Technology, Japan\nM. Eng. in Advanced Informatics, 2022\nKyushu Institute of Technology, Japan\nB. Eng. in Electrical Engineering (specialised in Telecommunication), 2017\nDiponegoro University, Indonesia"
-  },
-  {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "Harry PRATAMA",
-    "section": "Interests",
-    "text": "Interests\n\nData Analysis\nData Visualisation\nKnowledge Sharing\nLearning New Skills\nQuarto\nDota"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Little fun project with Pi Car\n\n\n\n\n\n\n\npython\n\n\n\n\nI had a little fun playing with the Pi Car.\n\n\n\n\n\n\nMay 7, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "#importing libraries\nimport altair as alt\nfrom bokeh.sampledata.penguins import data as penguins\n\nimport warnings\nwarnings.simplefilter(action='ignore', category=FutureWarning)\n\n#plotting\nbrush = alt.selection(type='interval')\n\npoints = alt.Chart(\n  data=penguins, \n  title=\"Palmer Penguins Dataset\",\n  ).mark_circle(size=60).encode(\n  alt.X('bill_length_mm', scale=alt.Scale(domain=[30,60])),\n  alt.Y('bill_depth_mm', scale=alt.Scale(domain=[12,22])),\n  color='species',\n  ).add_selection(\n    brush\n)\n\nbars = alt.Chart(penguins).mark_bar().encode(\n    y='island',\n    color='island',\n    x='count(island)'\n).transform_filter(\n    brush\n)\n\npoints & bars\n\n/Users/harry/Library/Python/3.9/lib/python/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'selection' is deprecated.\n   Use 'selection_point()' or 'selection_interval()' instead; these functions also include more helpful docstrings.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)\n/Users/harry/Library/Python/3.9/lib/python/site-packages/altair/utils/deprecation.py:65: AltairDeprecationWarning: 'add_selection' is deprecated. Use 'add_params' instead.\n  warnings.warn(message, AltairDeprecationWarning, stacklevel=1)"
   },
   {
     "objectID": "posts/post1_20230805/post1.html",
@@ -63,8 +56,15 @@
     "text": "Result\nI will update this page when I have tested the codes above."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
+    "objectID": "publication.html",
+    "href": "publication.html",
+    "title": "Publication",
+    "section": "",
+    "text": "Here is some papers I have published and the awards.\n\nAward\n\nExcellent Student Paper Award: 2022 International Workshop on Smart Info-Media Systems in Asia\n\n\n\nInternational conference\n\nMuhammad Harry Bintang Pratama, Tomoki Nakashima, Yuhei Nagaoe, Masayuki Kurosaki, and Hiroshi Ochi, “Experimental Evaluation of Rate Adaptation using Deep-Q-Network in IEEE 802.11 WLAN”, IEEE Consumer Communications & Networking Conference(CCNC2023), Las Vegas, 9 January, 2023.\nTomoki Nakashima, Leonardo Lanante, Muhammad Harry Bintang Pratama, Masayuki Kurosaki, and Hiroshi Ochi,“ns3-ai: Rate Control for Wireless LAN by Deep Q-Network,” International Workshop on Smart Info-Media System in Asia(SISA2022), Online, 15 September, 2022.\nMuhammad Harry Bintang Pratama, Leonardo Lanante, and Hiroshi Ochi, “A Low Complexity Carrier Frequency Offset Compensation for Full-Duplex with Cooperative MIMO in IEEE 802.11 WLAN,” International Workshop on Smart Info-Media System in Asia(SISA2022), Online, 15 September, 2022.\nDody Ichwana Putra, M.Harry Bintang, Leonardo Lanante Jr, and Hiroshi Ochi, “Packet Format and Modulation Classification of Wireless LAN Using Distributed Convolutional Neural Network”, Proc. IEEE International Symposium On Intelligent Signal Processing And Communication Systems (ISPACS 2021), Online, paper #137, November 2021.\nMuhammad Harry Bintang Pratama, Dody Ichwana Putra, Leonardo Lanante and Hiroshi Ochi, “Convolutional Neural Network for Asynchronous Packet Parameter Identification in Dense Wi-Fi,” Proc. 2021 IEEE International Conference on Communications Workshops, IEEE ICC 2021 WS-16, paper #1570707186, pp. 1-6, Online,14-23 (17) June 2021.\n\n\n\nDomestic conference\n\nMuhammad Harry Bintang Pratama, Leonardo Lanante Jr, 尾知博、”Deep Learning-based OBSS Packet Recognition in the presence of OFDM Symbol Timing Offset”, スマートインフォメディアシステム研究会（SIS)、Soft Computing, paper #IEICE-SIS2020-55, pp. 109-113, Online, 5 March 2021.\nMuhammad Harry Bintang Pratama, Leonardo Lanante Jr, 尾知博、”CNN-based OBSS Packet Detection for Spatial Reuse Enhancement”,2021電子情報通信学会総合大会、D-20 (情報論的学習理論と機械学習), paper #21G2030, Online, 9-12 (11) March 2021."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Projects",
     "section": "",
     "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLive birth occurence\n\n\n\nPython\n\n\nMachine Learning\n\n\n\nPredict the possibility of live birth occurence.\n\n\n\n\n\n\n\n\n\n\nSimple video transcript creator\n\n\n\nPython\n\n\nMachine Learning\n\n\n\nWeb app to extract transcript from the uploaded video file.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlotting demo\n\n\n\nPython\n\n\n\nJust an example to see if the web app is working.\n\n\n\n\n\n\n\nNo matching items"

@@ -1,31 +1,59 @@
 ---
-title: "Projects"
-page-layout: full
-title-block-banner: true
-listing:
-  sort: "date desc"
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  max-description-length: 300
-  fields: [image, title, description, categories]
-  contents:
-    - path: http://lab.harrybp.com/live_birth_occ
-      image: /projects/live-birth-occ.png
-      title: "Live birth occurence"
-      description: "Predict the possibility of live birth occurence."
-      date: "2023-08-10"
-      categories: [Python, Machine Learning]
-    - path: http://lab.harrybp.com/vid_transcript
-      title: "Simple video transcript creator"
-      description: "Web app to extract transcript from the uploaded video file."
-      date: "2023-07-26"
-      categories: [Python, Machine Learning]
-    - path: http://lab.harrybp.com/plotting_demo
-      image: /projects/plotting-demo.png
-      title: "Plotting demo"
-      description: "Just an example to see if the web app is working."
-      date: "2023-04-01"
-      categories: [Python]
+title: "Harry PRATAMA"
+subtitle: |
+  Doctoral student and pro Dota player (_wannabe_)
+image: /pict/futao.png
+about:
+  id: edu-exp
+  template: solana
+  image-width: 9em
+  image-shape: round
+  links:
+    - text: "{{< iconify fa6-solid envelope >}}"
+      href: "mailto:muhammadharry.bp@gmail.com"
+      aria-label: "envelope logo for email"
+    - text: "{{< iconify fa6-brands twitter >}}"
+      href: "https://twitter.com/hrrx102"
+      aria-label: "Twitter logo linking to harrypratama account"
+    - text: "{{< iconify fa6-brands linkedin >}}"
+      href: "https://www.linkedin.com/in/harry64h/"
+      aria-label: "LinkedIn logo linking to harrypratama account"
+    - text: "{{< iconify fa6-brands github >}}"
+      href: "https://github.com/harrybpm"
+      aria-label: "GitHub logo linking to harrypratama account"
 ---
+
+::: {#edu-exp}
+:::
+
+I'm a PhD student majoring in computer science with a focus on Machine Learning, Signal Processing, VLSI, and Wireless Communication. This platform is where I share the knowledge I've gained, the insights I've gathered, and the challenges I've overcome during my academic journey.
+
+
+:::: {.grid}
+
+::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
+## Education
+
+- **Ph.D. in Computer science**, **2022-now**  
+  *Kyushu Institute of Technology, Japan*
+
+- **_M. Eng._ in Advanced Informatics**, **2022**  
+  *Kyushu Institute of Technology, Japan*
+
+- **_B. Eng._ in Electrical Engineering** (*specialised in Telecommunication*), **2017**  
+  *Diponegoro University, Indonesia*
+:::
+
+::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
+## Interests
+
+- Data Analysis
+- Data Visualisation
+- Knowledge Sharing
+- Learning New Skills
+- Quarto
+- Dota
+
+:::
+
+::::
