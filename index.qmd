@@ -1,6 +1,7 @@
 ---
 title: "Projects"
-subtitle: by Harry Pratama.
+subtitle: by Harry Pratama
+description-title: Some projects I have done in the past. 
 page-layout: full
 title-block-banner: true
 listing:
